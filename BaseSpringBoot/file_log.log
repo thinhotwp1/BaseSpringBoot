@@ -964,3 +964,11 @@ org.springframework.security.access.AccessDeniedException: Access Denied
 2023-08-31T19:39:35.664+07:00  INFO 8616 --- [http-nio-8080-exec-3] c.e.basespringboot.log.APILoggingAspect  : PATH: /user/signup
 2023-08-31T19:39:35.664+07:00  INFO 8616 --- [http-nio-8080-exec-3] c.e.basespringboot.log.APILoggingAspect  : Username : anonymousUser
 2023-08-31T19:39:35.664+07:00  INFO 8616 --- [http-nio-8080-exec-3] c.e.basespringboot.log.APILoggingAspect  : RequestBody : RegisterRequest(userAdmin=admin, passwordAdmin=admin@123, user=admin, password=admin, role=admin)
+2023-08-31T20:07:25.343+07:00  INFO 8616 --- [http-nio-8080-exec-6] c.e.basespringboot.log.APILoggingAspect  : ______________________________________________________________________________________________________________________________________
+2023-08-31T20:07:25.343+07:00  INFO 8616 --- [http-nio-8080-exec-6] c.e.basespringboot.log.APILoggingAspect  : UUID: 5070467e-d542-4ba7-ad2e-ae143ed9460f
+2023-08-31T20:07:25.343+07:00  INFO 8616 --- [http-nio-8080-exec-6] c.e.basespringboot.log.APILoggingAspect  : PATH: /user/signup
+2023-08-31T20:07:25.343+07:00  INFO 8616 --- [http-nio-8080-exec-6] c.e.basespringboot.log.APILoggingAspect  : Username : anonymousUser
+2023-08-31T20:07:25.343+07:00  INFO 8616 --- [http-nio-8080-exec-6] c.e.basespringboot.log.APILoggingAspect  : RequestBody : RegisterRequest(userAdmin=admin, passwordAdmin=admin@123, user=admin, password=admin, role=admin)
+2023-08-31T20:17:59.371+07:00  INFO 8616 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T20:17:59.376+07:00  INFO 8616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-31T20:17:59.382+07:00  INFO 8616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
