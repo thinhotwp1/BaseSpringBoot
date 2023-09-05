@@ -1,6 +1,7 @@
 package com.example.basespringboot.exception;
 
 import com.example.basespringboot.resttemplate.ResponseData;
+import com.example.basespringboot.util.StringUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.ThreadContext;
@@ -30,80 +31,66 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({FileAlreadyExistsException.class})
     public ResponseEntity<?> handler(FileAlreadyExistsException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "File đã tồn tại trong hệ thống"));
     }
 
     @ExceptionHandler({ValidationException.class})
     public ResponseEntity<?> handler(ValidationException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, e.getMessage()));
     }
 
     @ExceptionHandler({InvalidAlgorithmParameterException.class})
     public ResponseEntity<?> handler(InvalidAlgorithmParameterException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, e.getMessage()));
     }
 
     @ExceptionHandler({IOException.class})
     public ResponseEntity<?> handler(IOException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "Không có file hoặc không đúng định dạng"));
     }
 
     @ExceptionHandler({AccessDeniedException.class})
     public ResponseEntity<?> handler(AccessDeniedException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ResponseData.fail(403, "Không được phép thực hiện"));
     }
 
     @ExceptionHandler({InvalidObjectException.class})
     public ResponseEntity<?> handler(InvalidObjectException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "File không hợp lệ"));
     }
 
     @ExceptionHandler({NumberFormatException.class})
     public ResponseEntity<?> handler(NumberFormatException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "Không đúng số lượng"));
     }
 
     @ExceptionHandler({InvalidFileNameException.class})
     public ResponseEntity<?> handler(InvalidFileNameException e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "File không hợp lệ"));
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleUnwantedException(Exception e) {
-        initLogging();
         logErrorDetail(e);
         return ResponseEntity.ok().body(ResponseData.fail(1000, "Có lỗi xảy ra trong quá trình xử lý: " + e.getMessage()));
     }
 
-    private void initLogging(){
-        ThreadContext.put("uuid", UUID.randomUUID().toString());
-        ThreadContext.put("path",request.getRequestURI());
-    }
-
     private void logErrorDetail(Exception e){
         // log Error Detail
-        log.info("______________________________________________________________________________________________________________________________________");
+        log.info("_________________________________________________________________ERROR________________________________________________________________");
+        log.info("TYPE: ERROR");
         log.info("UUID: " + ThreadContext.get("uuid"));
         log.info("PATH: " + ThreadContext.get("path"));
         // Nếu sử dụng cùng với Security và sử dụng authentication thì gán username vào
-        log.info("Username: " + SecurityContextHolder.getContext().getAuthentication().getName());
-//        log.info("Request: " + request.get);
+        log.info("Username : " + SecurityContextHolder.getContext().getAuthentication().getName());
         log.info("Error detail: "+ e.getMessage());
     }
 }

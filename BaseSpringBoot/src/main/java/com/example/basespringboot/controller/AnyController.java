@@ -17,6 +17,7 @@ public class AnyController {
 
     @PostMapping("/post")
     public ResponseEntity<?> getName(@RequestBody int number){
+        if(number==5) throw new RuntimeException("Hello");
         return ResponseEntity.ok(anyService.getName(number));
     }
 }

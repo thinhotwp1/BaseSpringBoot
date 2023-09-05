@@ -49,7 +49,7 @@ public class StringUtil {
 
 
     public static boolean isNullOrEmpty(String str) {
-        return ((str == null) || (str.trim().length() == 0));
+        return ((str == null) || (str.trim().isEmpty()));
     }
 
     public static boolean isNotNullOrEmpty(String str) {
