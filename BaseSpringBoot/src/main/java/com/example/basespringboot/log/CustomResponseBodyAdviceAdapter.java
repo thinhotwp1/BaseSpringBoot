@@ -3,6 +3,7 @@ package com.example.basespringboot.log;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.ThreadContext;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -23,18 +24,18 @@ public class CustomResponseBodyAdviceAdapter implements ResponseBodyAdvice<Objec
     HttpServletRequest httpServletRequest;
 
     @Override
-    public boolean supports(MethodParameter methodParameter,
-                            Class<? extends HttpMessageConverter<?>> aClass) {
+    public boolean supports(@NotNull MethodParameter methodParameter,
+                            @NotNull Class<? extends HttpMessageConverter<?>> aClass) {
         return true;
     }
 
     @Override
     public Object beforeBodyWrite(Object body,
-                                  MethodParameter methodParameter,
-                                  MediaType mediaType,
-                                  Class<? extends HttpMessageConverter<?>> aClass,
-                                  ServerHttpRequest serverHttpRequest,
-                                  ServerHttpResponse serverHttpResponse) {
+                                  @NotNull MethodParameter methodParameter,
+                                  @NotNull MediaType mediaType,
+                                  @NotNull Class<? extends HttpMessageConverter<?>> aClass,
+                                  @NotNull ServerHttpRequest serverHttpRequest,
+                                  @NotNull ServerHttpResponse serverHttpResponse) {
 
         // Log response
         log.info("________________________________________________________________RESPONSE_______________________________________________________________");

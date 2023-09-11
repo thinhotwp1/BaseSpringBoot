@@ -3,6 +3,7 @@ package com.example.basespringboot.log;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.ThreadContext;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpInputMessage;
@@ -22,15 +23,18 @@ public class CustomRequestBodyAdviceAdapter extends RequestBodyAdviceAdapter {
     HttpServletRequest httpServletRequest;
 
     @Override
-    public boolean supports(MethodParameter methodParameter, Type type,
-                            Class<? extends HttpMessageConverter<?>> aClass) {
+    public boolean supports(@NotNull MethodParameter methodParameter,
+                            @NotNull Type type,
+                            @NotNull Class<? extends HttpMessageConverter<?>> aClass) {
         return true;
     }
 
     @Override
-    public Object afterBodyRead(Object body, HttpInputMessage inputMessage,
-                                MethodParameter parameter, Type targetType,
-                                Class<? extends HttpMessageConverter<?>> converterType) {
+    public @NotNull Object afterBodyRead(Object body,
+                                         @NotNull HttpInputMessage inputMessage,
+                                         @NotNull MethodParameter parameter,
+                                         @NotNull Type targetType,
+                                         @NotNull Class<? extends HttpMessageConverter<?>> converterType) {
 
         ThreadContext.put("uuid", UUID.randomUUID().toString());
         ThreadContext.put("path", httpServletRequest.getRequestURI());
