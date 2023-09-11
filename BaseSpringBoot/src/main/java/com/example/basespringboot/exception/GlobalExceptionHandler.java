@@ -80,17 +80,17 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleUnwantedException(Exception e) {
         logErrorDetail(e);
-        return ResponseEntity.ok().body(ResponseData.fail(1000, "Có lỗi xảy ra trong quá trình xử lý: " + e.getMessage()));
+        return ResponseEntity.ok().body(ResponseData.fail(519, "Có lỗi xảy ra trong quá trình xử lý: " + e.getMessage()));
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<?> handler(RuntimeException e) {
+        logErrorDetail(e);
+        return ResponseEntity.status(520).body(ResponseData.fail(520, "Có lỗi Runtime trong quá trình xử lý: " + e.getMessage()));
     }
 
     private void logErrorDetail(Exception e){
         // log Error Detail
-        log.info("_________________________________________________________________ERROR________________________________________________________________");
-        log.info("TYPE: ERROR");
-        log.info("UUID: " + ThreadContext.get("uuid"));
-        log.info("PATH: " + ThreadContext.get("path"));
-        // Nếu sử dụng cùng với Security và sử dụng authentication thì gán username vào
-        log.info("Username : " + SecurityContextHolder.getContext().getAuthentication().getName());
-        log.info("Error detail: "+ e.getMessage());
+//        log.info("Error detail: "+ e.getMessage());
     }
 }
