@@ -1,181 +1,161 @@
-2023-09-11T13:22:20.726+07:00  INFO 39455 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Starting BaseSpringBootApplication using Java 17.0.7 with PID 39455 (/home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot/target/classes started by thinhpc in /home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot)
-2023-09-11T13:22:20.730+07:00  INFO 39455 --- [restartedMain] c.e.b.BaseSpringBootApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-09-11T13:22:20.759+07:00  INFO 39455 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-11T13:22:20.759+07:00  INFO 39455 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-11T13:22:21.211+07:00  INFO 39455 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-11T13:22:21.252+07:00  INFO 39455 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
-2023-09-11T13:22:21.793+07:00  INFO 39455 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-09-11T13:22:21.799+07:00  INFO 39455 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-09-11T13:22:21.799+07:00  INFO 39455 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
-2023-09-11T13:22:21.832+07:00  INFO 39455 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-09-11T13:22:21.832+07:00  INFO 39455 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
-2023-09-11T13:22:21.973+07:00  INFO 39455 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-11T13:22:22.017+07:00  INFO 39455 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
-2023-09-11T13:22:22.019+07:00  INFO 39455 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-09-11T13:22:22.116+07:00  INFO 39455 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:22:22.212+07:00  INFO 39455 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-09-11T13:22:22.225+07:00  INFO 39455 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-09-11T13:22:22.439+07:00  INFO 39455 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10bafab7
-2023-09-11T13:22:22.441+07:00  INFO 39455 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-09-11T13:22:22.620+07:00  INFO 39455 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:22:23.005+07:00  INFO 39455 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-11T13:22:23.095+07:00  INFO 39455 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-11T13:22:23.643+07:00  WARN 39455 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-11T13:22:24.034+07:00  INFO 39455 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@acbb24a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3377c51b, org.springframework.security.web.context.SecurityContextHolderFilter@4b61126b, org.springframework.security.web.header.HeaderWriterFilter@70cf7f53, org.springframework.security.web.authentication.logout.LogoutFilter@7ee7833d, com.example.basespringboot.config.JwtAuthenticationFilter@4cb2f428, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1466714f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@312a27b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31b19e46, org.springframework.security.web.session.SessionManagementFilter@47ac8d, org.springframework.security.web.access.ExceptionTranslationFilter@57752f74, org.springframework.security.web.access.intercept.AuthorizationFilter@680d492a]
-2023-09-11T13:22:24.315+07:00  INFO 39455 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-09-11T13:22:24.337+07:00  INFO 39455 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-11T13:22:24.343+07:00  INFO 39455 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Started BaseSpringBootApplication in 3.896 seconds (process running for 4.327)
-2023-09-11T13:22:46.428+07:00  INFO 39455 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-11T13:22:46.428+07:00  INFO 39455 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-09-11T13:22:46.429+07:00  INFO 39455 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-09-11T13:23:28.196+07:00  INFO 39455 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-11T13:23:28.198+07:00  INFO 39455 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-09-11T13:23:28.203+07:00  INFO 39455 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-09-11T13:23:30.548+07:00  INFO 39773 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Starting BaseSpringBootApplication using Java 17.0.7 with PID 39773 (/home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot/target/classes started by thinhpc in /home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot)
-2023-09-11T13:23:30.550+07:00  INFO 39773 --- [restartedMain] c.e.b.BaseSpringBootApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-09-11T13:23:30.578+07:00  INFO 39773 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-11T13:23:30.578+07:00  INFO 39773 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-11T13:23:30.954+07:00  INFO 39773 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-11T13:23:30.993+07:00  INFO 39773 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
-2023-09-11T13:23:31.520+07:00  INFO 39773 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-09-11T13:23:31.527+07:00  INFO 39773 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-09-11T13:23:31.527+07:00  INFO 39773 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
-2023-09-11T13:23:31.558+07:00  INFO 39773 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-09-11T13:23:31.558+07:00  INFO 39773 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 980 ms
-2023-09-11T13:23:31.690+07:00  INFO 39773 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-11T13:23:31.723+07:00  INFO 39773 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
-2023-09-11T13:23:31.724+07:00  INFO 39773 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-09-11T13:23:31.811+07:00  INFO 39773 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:23:31.895+07:00  INFO 39773 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-09-11T13:23:31.905+07:00  INFO 39773 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-09-11T13:23:32.105+07:00  INFO 39773 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e165a4d
-2023-09-11T13:23:32.106+07:00  INFO 39773 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-09-11T13:23:32.258+07:00  INFO 39773 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:23:32.640+07:00  INFO 39773 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-11T13:23:32.690+07:00  INFO 39773 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-11T13:23:33.135+07:00  WARN 39773 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-11T13:23:33.533+07:00  INFO 39773 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c509ecd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59db47ca, org.springframework.security.web.context.SecurityContextHolderFilter@651da4b6, org.springframework.security.web.header.HeaderWriterFilter@2fc48fea, org.springframework.security.web.authentication.logout.LogoutFilter@69b28011, com.example.basespringboot.config.JwtAuthenticationFilter@4b73b6f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@151aa91e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44996186, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f9e1558, org.springframework.security.web.session.SessionManagementFilter@517c19a7, org.springframework.security.web.access.ExceptionTranslationFilter@6ad9c54d, org.springframework.security.web.access.intercept.AuthorizationFilter@4010d263]
-2023-09-11T13:23:34.175+07:00  INFO 39773 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-09-11T13:23:34.201+07:00  INFO 39773 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-11T13:23:34.207+07:00  INFO 39773 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Started BaseSpringBootApplication in 3.929 seconds (process running for 4.311)
-2023-09-11T13:23:36.847+07:00  INFO 39773 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-11T13:23:36.847+07:00  INFO 39773 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-09-11T13:23:36.849+07:00  INFO 39773 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-09-11T13:23:36.905+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : request_api: /api/postbody: 1
-2023-09-11T13:23:36.918+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.basespringboot.log.APILoggingAspect  : ________________________________________________________________REQUEST_______________________________________________________________
-2023-09-11T13:23:36.919+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.basespringboot.log.APILoggingAspect  : TYPE: REQUEST
-2023-09-11T13:23:36.919+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.basespringboot.log.APILoggingAspect  : UUID: ef194fa4-f362-4170-8973-f862abc0282f
-2023-09-11T13:23:36.919+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.basespringboot.log.APILoggingAspect  : PATH: /api/post
-2023-09-11T13:23:36.919+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.basespringboot.log.APILoggingAspect  : Username : anonymousUser
-2023-09-11T13:23:36.919+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.basespringboot.log.APILoggingAspect  : RequestBody : 1
-2023-09-11T13:23:36.950+07:00  INFO 39773 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : response_api: /api/postbody: ResponseData(status=0, message=Success!, timeResponse=Mon Sep 11 13:23:36 ICT 2023, uuid=ef194fa4-f362-4170-8973-f862abc0282f, duration=1694413416920, path=/api/post, data=1)
-2023-09-11T13:27:48.235+07:00  INFO 39773 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-11T13:27:48.237+07:00  INFO 39773 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-09-11T13:27:48.242+07:00  INFO 39773 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-09-11T13:27:51.659+07:00  INFO 43762 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Starting BaseSpringBootApplication using Java 17.0.7 with PID 43762 (/home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot/target/classes started by thinhpc in /home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot)
-2023-09-11T13:27:51.661+07:00  INFO 43762 --- [restartedMain] c.e.b.BaseSpringBootApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-09-11T13:27:51.691+07:00  INFO 43762 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-11T13:27:51.692+07:00  INFO 43762 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-11T13:27:52.205+07:00  INFO 43762 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-11T13:27:52.244+07:00  INFO 43762 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
-2023-09-11T13:27:52.634+07:00  INFO 43762 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-09-11T13:27:52.639+07:00  INFO 43762 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-09-11T13:27:52.639+07:00  INFO 43762 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
-2023-09-11T13:27:52.669+07:00  INFO 43762 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-09-11T13:27:52.670+07:00  INFO 43762 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 978 ms
-2023-09-11T13:27:52.762+07:00  INFO 43762 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-11T13:27:52.802+07:00  INFO 43762 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
-2023-09-11T13:27:52.803+07:00  INFO 43762 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-09-11T13:27:52.908+07:00  INFO 43762 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:27:52.998+07:00  INFO 43762 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-09-11T13:27:53.009+07:00  INFO 43762 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-09-11T13:27:53.228+07:00  INFO 43762 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@420187cf
-2023-09-11T13:27:53.229+07:00  INFO 43762 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-09-11T13:27:53.384+07:00  INFO 43762 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:27:53.846+07:00  INFO 43762 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-11T13:27:53.920+07:00  INFO 43762 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-11T13:27:54.233+07:00  WARN 43762 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-11T13:27:54.435+07:00  INFO 43762 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b6a9d4e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fdb8d83, org.springframework.security.web.context.SecurityContextHolderFilter@4bcef60a, org.springframework.security.web.header.HeaderWriterFilter@49ad4de, org.springframework.security.web.authentication.logout.LogoutFilter@5424322d, com.example.basespringboot.config.JwtAuthenticationFilter@63fc1c5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e918986, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bff9261, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8334f61, org.springframework.security.web.session.SessionManagementFilter@49df0300, org.springframework.security.web.access.ExceptionTranslationFilter@4b82698b, org.springframework.security.web.access.intercept.AuthorizationFilter@7747c3c]
-2023-09-11T13:27:54.576+07:00  INFO 43762 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-09-11T13:27:54.595+07:00  INFO 43762 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-11T13:27:54.601+07:00  INFO 43762 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Started BaseSpringBootApplication in 3.201 seconds (process running for 3.629)
-2023-09-11T13:27:56.667+07:00  INFO 43762 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-11T13:27:56.668+07:00  INFO 43762 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-09-11T13:27:56.668+07:00  INFO 43762 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-09-11T13:27:56.713+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : ________________________________________________________________REQUEST_______________________________________________________________
-2023-09-11T13:27:56.713+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : TYPE: REQUEST
-2023-09-11T13:27:56.713+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: a7f80875-7822-4cb7-b62b-0b99729fd18d
-2023-09-11T13:27:56.713+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
-2023-09-11T13:27:56.713+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : Username : anonymousUser
-2023-09-11T13:27:56.713+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : RequestBody : 1
-2023-09-11T13:27:56.742+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : ________________________________________________________________RESPONSE_______________________________________________________________
-2023-09-11T13:27:56.742+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : TYPE: RESPONSE
-2023-09-11T13:27:56.742+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: a7f80875-7822-4cb7-b62b-0b99729fd18d
-2023-09-11T13:27:56.742+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
-2023-09-11T13:27:56.743+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : Username : anonymousUser
-2023-09-11T13:27:56.745+07:00  INFO 43762 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : RequestBody : ResponseData(status=0, message=Success!, timeResponse=Mon Sep 11 13:27:56 ICT 2023, uuid=a7f80875-7822-4cb7-b62b-0b99729fd18d, duration=1694413676717, path=/api/post, data=1)
-2023-09-11T13:28:47.795+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : ________________________________________________________________REQUEST_______________________________________________________________
-2023-09-11T13:28:47.795+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : TYPE: REQUEST
-2023-09-11T13:28:47.795+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: e3f5bde9-c1ab-41ef-9a05-deed89461821
-2023-09-11T13:28:47.795+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
-2023-09-11T13:28:47.795+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : Username : anonymousUser
-2023-09-11T13:28:47.795+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : RequestBody : 5
-2023-09-11T13:28:47.796+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.exception.GlobalExceptionHandler   : _________________________________________________________________ERROR________________________________________________________________
-2023-09-11T13:28:47.797+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.exception.GlobalExceptionHandler   : TYPE: ERROR
-2023-09-11T13:28:47.797+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.exception.GlobalExceptionHandler   : UUID: e3f5bde9-c1ab-41ef-9a05-deed89461821
-2023-09-11T13:28:47.797+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.exception.GlobalExceptionHandler   : PATH: /api/post
-2023-09-11T13:28:47.797+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.exception.GlobalExceptionHandler   : Username : anonymousUser
-2023-09-11T13:28:47.797+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.exception.GlobalExceptionHandler   : Error detail: Hello
-2023-09-11T13:28:47.798+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : ________________________________________________________________RESPONSE_______________________________________________________________
-2023-09-11T13:28:47.798+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : TYPE: RESPONSE
-2023-09-11T13:28:47.798+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: e3f5bde9-c1ab-41ef-9a05-deed89461821
-2023-09-11T13:28:47.798+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
-2023-09-11T13:28:47.798+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : Username : anonymousUser
-2023-09-11T13:28:47.798+07:00  INFO 43762 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : RequestBody : ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Mon Sep 11 13:28:47 ICT 2023, uuid=e3f5bde9-c1ab-41ef-9a05-deed89461821, duration=1694413727797, path=/api/post, data=null)
-2023-09-11T13:28:47.799+07:00  WARN 43762 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
-2023-09-11T13:29:39.563+07:00  INFO 43762 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-11T13:29:39.565+07:00  INFO 43762 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-09-11T13:29:39.570+07:00  INFO 43762 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-09-11T13:29:41.736+07:00  INFO 44057 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Starting BaseSpringBootApplication using Java 17.0.7 with PID 44057 (/home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot/target/classes started by thinhpc in /home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot)
-2023-09-11T13:29:41.737+07:00  INFO 44057 --- [restartedMain] c.e.b.BaseSpringBootApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-09-11T13:29:41.769+07:00  INFO 44057 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-11T13:29:41.769+07:00  INFO 44057 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-11T13:29:42.087+07:00  INFO 44057 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-11T13:29:42.120+07:00  INFO 44057 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
-2023-09-11T13:29:42.473+07:00  INFO 44057 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-09-11T13:29:42.478+07:00  INFO 44057 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-09-11T13:29:42.478+07:00  INFO 44057 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
-2023-09-11T13:29:42.504+07:00  INFO 44057 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-09-11T13:29:42.504+07:00  INFO 44057 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 735 ms
-2023-09-11T13:29:42.586+07:00  INFO 44057 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-11T13:29:42.612+07:00  INFO 44057 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
-2023-09-11T13:29:42.613+07:00  INFO 44057 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-09-11T13:29:42.689+07:00  INFO 44057 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:29:42.769+07:00  INFO 44057 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-09-11T13:29:42.778+07:00  INFO 44057 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-09-11T13:29:42.954+07:00  INFO 44057 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@420187cf
-2023-09-11T13:29:42.956+07:00  INFO 44057 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-09-11T13:29:43.098+07:00  INFO 44057 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-11T13:29:43.445+07:00  INFO 44057 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-11T13:29:43.492+07:00  INFO 44057 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-11T13:29:43.750+07:00  WARN 44057 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-11T13:29:43.931+07:00  INFO 44057 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b6a9d4e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fdb8d83, org.springframework.security.web.context.SecurityContextHolderFilter@4bcef60a, org.springframework.security.web.header.HeaderWriterFilter@49ad4de, org.springframework.security.web.authentication.logout.LogoutFilter@5424322d, com.example.basespringboot.config.JwtAuthenticationFilter@63fc1c5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e918986, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bff9261, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8334f61, org.springframework.security.web.session.SessionManagementFilter@49df0300, org.springframework.security.web.access.ExceptionTranslationFilter@4b82698b, org.springframework.security.web.access.intercept.AuthorizationFilter@7747c3c]
-2023-09-11T13:29:44.067+07:00  INFO 44057 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-09-11T13:29:44.085+07:00  INFO 44057 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-11T13:29:44.091+07:00  INFO 44057 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Started BaseSpringBootApplication in 2.627 seconds (process running for 2.951)
-2023-09-11T13:30:02.390+07:00  INFO 44057 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-11T13:30:02.390+07:00  INFO 44057 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-09-11T13:30:02.391+07:00  INFO 44057 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-09-11T13:30:02.439+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : ________________________________________________________________REQUEST_______________________________________________________________
-2023-09-11T13:30:02.439+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : TYPE: REQUEST
-2023-09-11T13:30:02.439+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: ca9ddb54-6933-4b2e-9f3c-270285b2e2b0
-2023-09-11T13:30:02.439+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
-2023-09-11T13:30:02.439+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : Username : anonymousUser
-2023-09-11T13:30:02.440+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : RequestBody : 5
-2023-09-11T13:30:02.476+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : ________________________________________________________________RESPONSE_______________________________________________________________
-2023-09-11T13:30:02.476+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : TYPE: RESPONSE
-2023-09-11T13:30:02.476+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: ca9ddb54-6933-4b2e-9f3c-270285b2e2b0
-2023-09-11T13:30:02.476+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
-2023-09-11T13:30:02.476+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : Username : anonymousUser
-2023-09-11T13:30:02.479+07:00  INFO 44057 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : RequestBody : ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Mon Sep 11 13:30:02 ICT 2023, uuid=ca9ddb54-6933-4b2e-9f3c-270285b2e2b0, duration=1694413802445, path=/api/post, data=null)
-2023-09-11T13:30:02.489+07:00  WARN 44057 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:15.940+07:00  INFO 9930 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Starting BaseSpringBootApplication using Java 17.0.7 with PID 9930 (/home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot/target/classes started by thinhpc in /home/thinhpc/Code/BaseSpringBoot/BaseSpringBoot)
+2023-09-14T09:22:15.944+07:00  INFO 9930 --- [restartedMain] c.e.b.BaseSpringBootApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-09-14T09:22:15.972+07:00  INFO 9930 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-14T09:22:15.973+07:00  INFO 9930 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-14T09:22:16.375+07:00  INFO 9930 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-14T09:22:16.443+07:00  INFO 9930 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interfaces.
+2023-09-14T09:22:16.923+07:00  INFO 9930 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-14T09:22:16.932+07:00  INFO 9930 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-14T09:22:16.932+07:00  INFO 9930 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-14T09:22:16.972+07:00  INFO 9930 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-14T09:22:16.973+07:00  INFO 9930 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1000 ms
+2023-09-14T09:22:17.081+07:00  INFO 9930 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-14T09:22:17.117+07:00  INFO 9930 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-14T09:22:17.119+07:00  INFO 9930 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-14T09:22:17.224+07:00  INFO 9930 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-14T09:22:17.300+07:00  INFO 9930 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-14T09:22:17.310+07:00  INFO 9930 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-14T09:22:17.526+07:00  INFO 9930 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@462f92fd
+2023-09-14T09:22:17.527+07:00  INFO 9930 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-14T09:22:17.692+07:00  INFO 9930 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-14T09:22:18.090+07:00  INFO 9930 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-14T09:22:18.142+07:00  INFO 9930 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-14T09:22:18.438+07:00  WARN 9930 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-14T09:22:18.655+07:00  INFO 9930 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@febd457, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1165daff, org.springframework.security.web.context.SecurityContextHolderFilter@6ee6cbc4, org.springframework.security.web.header.HeaderWriterFilter@2095c9d4, org.springframework.security.web.authentication.logout.LogoutFilter@309de50d, com.example.basespringboot.config.JwtAuthenticationFilter@637b577d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79b7145, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b90b507, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20d2984a, org.springframework.security.web.session.SessionManagementFilter@526d4053, org.springframework.security.web.access.ExceptionTranslationFilter@d1f9f72, org.springframework.security.web.access.intercept.AuthorizationFilter@68eecfca]
+2023-09-14T09:22:18.790+07:00  INFO 9930 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-14T09:22:18.809+07:00  INFO 9930 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-14T09:22:18.815+07:00  INFO 9930 --- [restartedMain] c.e.b.BaseSpringBootApplication          : Started BaseSpringBootApplication in 3.119 seconds (process running for 3.53)
+2023-09-14T09:22:22.220+07:00  INFO 9930 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-14T09:22:22.221+07:00  INFO 9930 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-14T09:22:22.221+07:00  INFO 9930 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-14T09:22:22.263+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:22.263+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 2ea6ae8c-c8ca-43f5-b76b-b136572dbc0c
+2023-09-14T09:22:22.263+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:22.263+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:22.264+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:22.293+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:22.293+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 2ea6ae8c-c8ca-43f5-b76b-b136572dbc0c
+2023-09-14T09:22:22.294+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:22.294+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:22.297+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:22 ICT 2023, uuid=2ea6ae8c-c8ca-43f5-b76b-b136572dbc0c, duration=7, path=/api/post, data=null)
+2023-09-14T09:22:22.307+07:00  WARN 9930 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:26.625+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:26.625+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 9648f003-e95a-4a6e-abd7-98004c9bfb25
+2023-09-14T09:22:26.625+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:26.625+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:26.625+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:26.626+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:26.626+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 9648f003-e95a-4a6e-abd7-98004c9bfb25
+2023-09-14T09:22:26.626+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:26.626+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:26.626+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:26 ICT 2023, uuid=9648f003-e95a-4a6e-abd7-98004c9bfb25, duration=0, path=/api/post, data=null)
+2023-09-14T09:22:26.627+07:00  WARN 9930 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:27.260+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:27.261+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: ff0385b4-17f7-4a73-8377-f47288e9acc0
+2023-09-14T09:22:27.261+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:27.261+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:27.261+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:27.261+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:27.261+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: ff0385b4-17f7-4a73-8377-f47288e9acc0
+2023-09-14T09:22:27.261+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:27.262+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:27.262+07:00  INFO 9930 --- [http-nio-8080-exec-4] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:27 ICT 2023, uuid=ff0385b4-17f7-4a73-8377-f47288e9acc0, duration=1, path=/api/post, data=null)
+2023-09-14T09:22:27.263+07:00  WARN 9930 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:27.676+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:27.676+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 4335f2e9-08e2-4a38-8a83-91d1827e864c
+2023-09-14T09:22:27.676+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:27.677+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:27.677+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:27.677+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:27.677+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 4335f2e9-08e2-4a38-8a83-91d1827e864c
+2023-09-14T09:22:27.677+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:27.677+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:27.677+07:00  INFO 9930 --- [http-nio-8080-exec-5] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:27 ICT 2023, uuid=4335f2e9-08e2-4a38-8a83-91d1827e864c, duration=1, path=/api/post, data=null)
+2023-09-14T09:22:27.678+07:00  WARN 9930 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:28.984+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:28.984+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 453da328-17d2-4668-b39f-fd3005eaad39
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 453da328-17d2-4668-b39f-fd3005eaad39
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:28.985+07:00  INFO 9930 --- [http-nio-8080-exec-6] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:28 ICT 2023, uuid=453da328-17d2-4668-b39f-fd3005eaad39, duration=1, path=/api/post, data=null)
+2023-09-14T09:22:28.986+07:00  WARN 9930 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 931baf9a-27c3-4007-a1ea-938fca35ee90
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 931baf9a-27c3-4007-a1ea-938fca35ee90
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:29.536+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:29.537+07:00  INFO 9930 --- [http-nio-8080-exec-7] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:29 ICT 2023, uuid=931baf9a-27c3-4007-a1ea-938fca35ee90, duration=0, path=/api/post, data=null)
+2023-09-14T09:22:29.537+07:00  WARN 9930 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: b2091ece-efa8-4061-82e3-630a028f7768
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: b2091ece-efa8-4061-82e3-630a028f7768
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:30.044+07:00  INFO 9930 --- [http-nio-8080-exec-8] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:30 ICT 2023, uuid=b2091ece-efa8-4061-82e3-630a028f7768, duration=1, path=/api/post, data=null)
+2023-09-14T09:22:30.045+07:00  WARN 9930 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:30.602+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:30.602+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 9d13054c-9c38-434f-8780-8313a70e1c86
+2023-09-14T09:22:30.602+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:30.602+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:30.602+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:30.603+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:30.603+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 9d13054c-9c38-434f-8780-8313a70e1c86
+2023-09-14T09:22:30.603+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:30.603+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:30.603+07:00  INFO 9930 --- [http-nio-8080-exec-9] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:30 ICT 2023, uuid=9d13054c-9c38-434f-8780-8313a70e1c86, duration=1, path=/api/post, data=null)
+2023-09-14T09:22:30.604+07:00  WARN 9930 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:31.082+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:31.082+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 4a340c93-5607-440d-8676-fe5f33c08ff9
+2023-09-14T09:22:31.082+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:31.082+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:31.082+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:31.083+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:31.083+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 4a340c93-5607-440d-8676-fe5f33c08ff9
+2023-09-14T09:22:31.083+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:31.083+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:31.083+07:00  INFO 9930 --- [http-nio-8080-exec-10] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:31 ICT 2023, uuid=4a340c93-5607-440d-8676-fe5f33c08ff9, duration=0, path=/api/post, data=null)
+2023-09-14T09:22:31.083+07:00  WARN 9930 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 67f8203b-7cfa-460d-ac3f-ff334d134074
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 67f8203b-7cfa-460d-ac3f-ff334d134074
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:31.542+07:00  INFO 9930 --- [http-nio-8080-exec-1] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:31 ICT 2023, uuid=67f8203b-7cfa-460d-ac3f-ff334d134074, duration=0, path=/api/post, data=null)
+2023-09-14T09:22:31.543+07:00  WARN 9930 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: da4b60fa-eca6-461a-91b9-7d06036449d0
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 5
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: da4b60fa-eca6-461a-91b9-7d06036449d0
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:32.072+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:32.073+07:00  INFO 9930 --- [http-nio-8080-exec-2] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=520, message=Có lỗi Runtime trong quá trình xử lý: Hello, timeResponse=Thu Sep 14 09:22:32 ICT 2023, uuid=da4b60fa-eca6-461a-91b9-7d06036449d0, duration=0, path=/api/post, data=null)
+2023-09-14T09:22:32.073+07:00  WARN 9930 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Hello]
+2023-09-14T09:22:41.026+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : ______________________________REQUEST_________________________________________________________________________________________________
+2023-09-14T09:22:41.026+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : UUID: 801d60e8-3ac1-4e75-a000-939c242dd57f
+2023-09-14T09:22:41.026+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : PATH: /api/post
+2023-09-14T09:22:41.026+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : USER: anonymousUser
+2023-09-14T09:22:41.026+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomRequestBodyAdviceAdapter   : REQUEST BODY: 4
+2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : ______________________________RESPONSE_________________________________________________________________________________________________
+2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : UUID: 801d60e8-3ac1-4e75-a000-939c242dd57f
+2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
+2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
+2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=0, message=Success!, timeResponse=Thu Sep 14 09:22:41 ICT 2023, uuid=801d60e8-3ac1-4e75-a000-939c242dd57f, duration=1, path=/api/post, data=4)
