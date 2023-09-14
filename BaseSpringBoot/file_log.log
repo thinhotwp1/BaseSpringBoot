@@ -159,3 +159,6 @@
 2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : PATH: /api/post
 2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : USER: anonymousUser
 2023-09-14T09:22:41.027+07:00  INFO 9930 --- [http-nio-8080-exec-3] c.e.b.l.CustomResponseBodyAdviceAdapter  : RESPONSE: ResponseData(status=0, message=Success!, timeResponse=Thu Sep 14 09:22:41 ICT 2023, uuid=801d60e8-3ac1-4e75-a000-939c242dd57f, duration=1, path=/api/post, data=4)
+2023-09-14T09:23:41.452+07:00  INFO 9930 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-14T09:23:41.454+07:00  INFO 9930 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-14T09:23:41.458+07:00  INFO 9930 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

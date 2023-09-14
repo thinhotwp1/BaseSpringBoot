@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.RestClientException;
 
 import java.io.*;
 import java.nio.file.AccessDeniedException;
@@ -80,7 +81,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleUnwantedException(Exception e) {
         logErrorDetail(e);
-        return ResponseEntity.ok().body(ResponseData.fail(519, "Có lỗi xảy ra trong quá trình xử lý: " + e.getMessage()));
+        return ResponseEntity.status(519).body(ResponseData.fail(519, "Có lỗi xảy ra trong quá trình xử lý: " + e.getMessage()));
     }
 
     @ExceptionHandler(RuntimeException.class)
@@ -89,6 +90,11 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(520).body(ResponseData.fail(520, "Có lỗi Runtime trong quá trình xử lý: " + e.getMessage()));
     }
 
+    @ExceptionHandler({RestClientException.class})
+    public ResponseEntity<?> handler(RestClientException e) {
+        logErrorDetail(e);
+        return ResponseEntity.status(521).body(ResponseData.fail(521, "Phản hồi lỗi: " + e.getMessage()));
+    }
     private void logErrorDetail(Exception e){
         // log Error Detail
 //        log.info("Error detail: "+ e.getMessage());

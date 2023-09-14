@@ -47,13 +47,16 @@ public class UserService implements UserDetailsService{
         LoginResponse loginResponse = new LoginResponse();
 
         // Validate
-        if(loginRequest.getUser().isEmpty() || loginRequest.getPassword().isEmpty() ){
-            return ResponseEntity.status(400).body("User, password can not null !");
+        if (loginRequest.getUser().isEmpty() || loginRequest.getPassword().isEmpty()) {
+            return ResponseEntity.status(400).body("User, password không thể để trống !");
         }
 
         // Get user from db
         User user = userRepository.findByUserName(loginRequest.getUser());
-        if (user.getUserName().equals(loginRequest.getUser()) && passwordEncoder.matches(loginRequest.getPassword(),user.getPassword())){
+        if (user == null) {
+            return ResponseEntity.status(400).body("Không tìm thấy tài khoản !");
+        }
+        if (user.getUserName().equals(loginRequest.getUser()) && passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {
 
             UserDetails userDetails = org.springframework.security.core.userdetails.User.withUsername(loginRequest.getUser()).password(loginRequest.getPassword()).build();
             UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null);
@@ -64,18 +67,21 @@ public class UserService implements UserDetailsService{
 
             return ResponseEntity.ok(loginResponse);
         } else {
-            return ResponseEntity.status(400).body("User or password wrong!");
+            return ResponseEntity.status(400).body("Sai tài khoản hoặc mật khẩu !");
         }
     }
 
-    public void signup(RegisterRequest request) throws Exception {
-        if(StringUtils.isEmpty(request.getUser())
+    public void signup(RegisterRequest request) throws RuntimeException {
+        // Validate
+        if (StringUtils.isEmpty(request.getUser())
                 || StringUtils.isEmpty(request.getPassword())
-                || StringUtils.isEmpty(request.getRole())
-        ){
-            throw new Exception("User, password, role can not null !");
+                || StringUtils.isEmpty(request.getRole())) {
+            throw new NullPointerException("User, password, role không thể để trống !");
         }
+
+        // check admin user
         if (userAdmin.equals(request.getUserAdmin()) && passwordAmin.equals(request.getPasswordAdmin())) {
+            // get user from database
             User user = userRepository.findByUserName(request.getUser());
             if (user == null) {
                 user = new User();
@@ -84,34 +90,45 @@ public class UserService implements UserDetailsService{
                 user.setRole(request.getRole());
                 userRepository.saveAndFlush(user);
             } else {
-                throw new Exception("Account is exited !");
+                throw new RuntimeException("Tài khoản đã tồn tại !");
             }
         } else {
-            throw new Exception("You are not admin !");
+            throw new RuntimeException("Bạn không phải admin !");
         }
     }
 
-    public void remove(RegisterRequest request) throws Exception {
-        if(StringUtils.isEmpty(request.getUser())){
-            throw new Exception("User can not null !");
-        }
+    public void remove(RegisterRequest request) throws RuntimeException {
+        // Validate
+        if (StringUtils.isEmpty(request.getUser())) throw new NullPointerException("User không thể để trống !");
+
+        // check admin user
         if (userAdmin.equals(request.getUserAdmin()) && passwordAmin.equals(request.getPasswordAdmin())) {
+            // get user from database
             User user = userRepository.findByUserName(request.getUser());
-            if(!Objects.isNull(user)){
+            if (!Objects.isNull(user)) {
                 userRepository.delete(user);
-            }else{
-                throw new Exception("Not found user with username: "+request.getUser());
+            } else {
+                throw new UsernameNotFoundException("Không tìm thấy tài khoản với user name: " + request.getUser());
             }
         } else {
-            throw new Exception("You are not admin !");
+            throw new RuntimeException("Bạn không phải admin !");
         }
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        // Find user by username
         User user = userRepository.findByUserName(username);
+
+        // Role list current:  admin
+        List<String> listRole = List.of(user.getRole().toLowerCase().trim().split(","));
+
+        // Get list role user
         List<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(user.getRole()));
+        for (String role : listRole) {
+            authorities.add(new SimpleGrantedAuthority(role));
+        }
+
         return new org.springframework.security.core.userdetails.User(username,
                 user.getPassword(),
                 authorities);
