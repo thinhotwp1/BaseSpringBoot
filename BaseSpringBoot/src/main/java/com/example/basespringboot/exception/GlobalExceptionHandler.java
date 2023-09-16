@@ -87,7 +87,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<?> handler(RuntimeException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(520).body(ResponseData.fail(520, "Có lỗi Runtime trong quá trình xử lý: " + e.getMessage()));
+        return ResponseEntity.status(520).body("Có lỗi Runtime trong quá trình xử lý: " + e.getMessage());
     }
 
     @ExceptionHandler({RestClientException.class})
