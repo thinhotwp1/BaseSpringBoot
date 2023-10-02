@@ -52,12 +52,7 @@ public class StringUtil {
         return ((str == null) || (str.trim().isEmpty()));
     }
 
-    public static boolean isNotNullOrEmpty(String str) {
-        return (!(isNullOrEmpty(str)));
-    }
-
     public static boolean isNotBlank(String str) {
         return (!(isBlank(str)));
     }
-
 }
