@@ -38,12 +38,8 @@ public class CustomResponseBodyAdviceAdapter implements ResponseBodyAdvice<Objec
                                   @NotNull ServerHttpResponse serverHttpResponse) {
 
         // Log response
-        log.info("______________________________RESPONSE_________________________________________________________________________________________________");
-        log.info("UUID: " + ThreadContext.get("uuid"));
-        log.info("PATH: " + ThreadContext.get("path"));
-        // Nếu sử dụng cùng với Security và sử dụng authentication thì gán username vào
-        log.info("USER: " + SecurityContextHolder.getContext().getAuthentication().getName());
-        log.info("RESPONSE: " + body);
+        SystemLog.log(body, TypeLog.RESPONSE);
+
         return body;
     }
 }

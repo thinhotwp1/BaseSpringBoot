@@ -36,18 +36,13 @@ public class CustomRequestBodyAdviceAdapter extends RequestBodyAdviceAdapter {
                                          @NotNull Type targetType,
                                          @NotNull Class<? extends HttpMessageConverter<?>> converterType) {
 
+        // init data into log thread
         ThreadContext.put("uuid", UUID.randomUUID().toString());
         ThreadContext.put("path", httpServletRequest.getRequestURI());
-        ThreadContext.put("request_body", body.toString());
         ThreadContext.put("startTime", String.valueOf(System.currentTimeMillis()));
 
-        // Log request before to controller
-        log.info("______________________________REQUEST_________________________________________________________________________________________________");
-        log.info("UUID: " + ThreadContext.get("uuid"));
-        log.info("PATH: " + ThreadContext.get("path"));
-        // Nếu sử dụng cùng với Security và sử dụng authentication thì gán username vào
-        log.info("USER: " + SecurityContextHolder.getContext().getAuthentication().getName());
-        log.info("REQUEST BODY: " + body);
+        // Log request
+        SystemLog.log(body, TypeLog.REQUEST);
 
         return super.afterBodyRead(body, inputMessage, parameter, targetType, converterType);
     }

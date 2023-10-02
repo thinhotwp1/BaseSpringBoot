@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-//@PreAuthorize("hasAuthority('adny') or hasAuthority('admin')")
+//@PreAuthorize("hasAuthority('any') or hasAuthority('admin')")
 public class AnyController {
 
     @Autowired
