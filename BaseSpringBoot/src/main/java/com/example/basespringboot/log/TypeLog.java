@@ -10,7 +10,7 @@ public enum TypeLog {
     REQUEST("request"),
     RESPONSE("response");
 
-    private String type;
+    private final String type;
 
     TypeLog(String type) {
         this.type = type;
