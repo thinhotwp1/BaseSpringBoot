@@ -1,6 +1,6 @@
 package com.example.basespringboot.service;
 
-import com.example.basespringboot.resttemplate.ResponseData;
+import com.example.basespringboot.rest.ResponseData;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 

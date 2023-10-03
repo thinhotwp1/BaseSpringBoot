@@ -1,6 +1,6 @@
 package com.example.basespringboot.exception;
 
-import com.example.basespringboot.resttemplate.ResponseData;
+import com.example.basespringboot.rest.ResponseData;
 import com.example.basespringboot.util.StringUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
@@ -33,55 +33,55 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({FileAlreadyExistsException.class})
     public ResponseEntity<?> handler(FileAlreadyExistsException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "File đã tồn tại trong hệ thống"));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseData<>().error(400, "File đã tồn tại trong hệ thống"));
     }
 
     @ExceptionHandler({ValidationException.class})
     public ResponseEntity<?> handler(ValidationException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, e.getMessage()));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseData<>().error(400, e.getMessage()));
     }
 
     @ExceptionHandler({InvalidAlgorithmParameterException.class})
     public ResponseEntity<?> handler(InvalidAlgorithmParameterException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, e.getMessage()));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseData<>().error(400, e.getMessage()));
     }
 
     @ExceptionHandler({IOException.class})
     public ResponseEntity<?> handler(IOException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "Không có file hoặc không đúng định dạng"));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseData<>().error(400, "Không có file hoặc không đúng định dạng"));
     }
 
     @ExceptionHandler({AccessDeniedException.class})
     public ResponseEntity<?> handler(AccessDeniedException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ResponseData.fail(403, "Không được phép thực hiện"));
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(new ResponseData<>().error(403, "Không được phép thực hiện"));
     }
 
     @ExceptionHandler({InvalidObjectException.class})
     public ResponseEntity<?> handler(InvalidObjectException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "File không hợp lệ"));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseData<>().error(400, "File không hợp lệ"));
     }
 
     @ExceptionHandler({NumberFormatException.class})
     public ResponseEntity<?> handler(NumberFormatException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "Không đúng số lượng"));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseData<>().error(400, "Không đúng số lượng"));
     }
 
     @ExceptionHandler({InvalidFileNameException.class})
     public ResponseEntity<?> handler(InvalidFileNameException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseData.fail(400, "File không hợp lệ"));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseData<>().error(400, "File không hợp lệ"));
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleUnwantedException(Exception e) {
         logErrorDetail(e);
-        return ResponseEntity.status(519).body(ResponseData.fail(519, "Có lỗi xảy ra trong quá trình xử lý: " + e.getMessage()));
+        return ResponseEntity.status(519).body(new ResponseData<>().error(519, "Có lỗi xảy ra trong quá trình xử lý: " + e.getMessage()));
     }
 
     @ExceptionHandler(RuntimeException.class)
@@ -93,7 +93,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({RestClientException.class})
     public ResponseEntity<?> handler(RestClientException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(521).body(ResponseData.fail(521, "Phản hồi lỗi: " + e.getMessage()));
+        return ResponseEntity.status(521).body(new ResponseData<>().error(521, "Phản hồi lỗi: " + e.getMessage()));
     }
     private void logErrorDetail(Exception e){
         // log Error Detail
