@@ -1,30 +1,26 @@
-package com.example.basespringboot.resttemplate;
+package com.example.basespringboot.rest;
 
 import com.example.basespringboot.util.StringUtil;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.apache.logging.log4j.ThreadContext;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
 @Data
 public class ResponseData<T> implements Serializable {
+    @Serial
     private static final long serialVersionUID = -5435628560059929L;
 
     private int status;
-
     private String message;
-
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS", timezone = "GMT+7")
     private final Date timeResponse;
-
     private String uuid;
-
     private long duration;
-
     private String path;
-
     private T data;
 
     public ResponseData() {
@@ -52,14 +48,6 @@ public class ResponseData<T> implements Serializable {
         return this;
     }
 
-    public static <T> ResponseData<T> ok(T body) {
-        return new ResponseData<T>().success(body);
-    }
-
-    public static <T> ResponseData<T> fail(int code, String body) {
-        return new ResponseData<T>().error(code, body);
-    }
-
     public ResponseData<T> error(int code, String message, T data) {
         this.status = code;
         this.message = message;
@@ -70,4 +58,5 @@ public class ResponseData<T> implements Serializable {
         this.duration = System.currentTimeMillis() - start;
         return this;
     }
+
 }

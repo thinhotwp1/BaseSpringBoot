@@ -19,6 +19,7 @@ public class User extends BaseEntity{
     @SequenceGenerator(name = "USER_SEQ", sequenceName = "USER_SEQ", allocationSize = 1)
     @Column(name = "ID")
     private Long id;
+    // Thay đổi sequenceName theo database đang dùng, oracle hoặc mysql khác nhau tránh lỗi syntax
 
     @Column(name = "USR_NAME")
     private String userName;

@@ -14,32 +14,24 @@ public class SystemLog {
     public static void log(Object object, TypeLog type) {
         /**
          * Log json to elk, example:
-         * {
-         * 	"time": "Oct 2, 2023, 9:23:54 AM",
-         * 	"type": "response",
-         * 	"uuid": "2ca8bc8e-be2b-4c6b-b54f-e9760eaeb813",
-         * 	"path": "/api/post",
-         * 	"user": "anonymousUser",
-         * 	"body": {
-         * 		"status": 0,
-         * 		"message": "Success!",
-         * 		"timeResponse": "Oct 2, 2023, 9:23:54 AM",
-         * 		"uuid": "2ca8bc8e-be2b-4c6b-b54f-e9760eaeb813",
-         * 		"duration": 6,
-         * 		"path": "/api/post",
-         * 		"data": 10
-         *      }
-         * }
+         {
+         "time": "Sep 29, 2023, 2:48:10 PM",
+         "type": "response",
+         "uuid": "9efa6b14-7b92-4488-84c0-0d5b75a97fe6",
+         "path": "/api/read-card-fpt",
+         "user": "livebank",
+         "body": "{status=0, message=Success!, uuid=a025f9da-8c98-47de-9bb7-537a9cc6b99c,...}"
+         }
          */
-        LOGGER.info("{"
-                + "\"time\": " + new Gson().toJson(new Timestamp(System.currentTimeMillis()))
-                + ", \"type\": \"" + type.getType()
-                + "\", \"uuid\": \"" + ThreadContext.get("uuid")
-                + "\", \"path\": \"" + ThreadContext.get("path")
-                + "\", \"user\": \"" + SecurityContextHolder.getContext().getAuthentication().getName()
-                + "\", \"body\": " + new Gson().toJson(object)
-                + "}"
-        );
+        LogDto logDto = new LogDto();
+        logDto.setTime(new Timestamp(System.currentTimeMillis()));
+        logDto.setTypeLog(type.getType());
+        logDto.setUuid(ThreadContext.get("uuid"));
+        logDto.setPath(ThreadContext.get("path"));
+        logDto.setUser(SecurityContextHolder.getContext().getAuthentication().getName());
+        logDto.setBody(object);
+
+        LOGGER.info(new Gson().toJson(logDto));
     }
 
 }
