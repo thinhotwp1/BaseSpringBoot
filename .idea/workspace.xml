@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42fc6186-3f9f-4be5-87d8-c958beb5cf32" name="Changes" comment="" />
+    <list default="true" id="42fc6186-3f9f-4be5-87d8-c958beb5cf32" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2UkSV0uz4j6rtTkmH8kAAYKYAWv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,10 +25,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/Code/BaseSpringBoot",
+    "last_opened_file_path": "/home/thinh/Personal/Code/BaseSpringBoot/BaseSpringBoot",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -36,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693482104512</updated>
       <workItem from="1693482105850" duration="48000" />
+      <workItem from="1697259134586" duration="9000" />
     </task>
     <servers />
   </component>
