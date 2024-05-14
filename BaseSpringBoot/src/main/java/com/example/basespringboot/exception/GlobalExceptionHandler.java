@@ -87,13 +87,13 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<?> handler(RuntimeException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(520).body("Có lỗi Runtime trong quá trình xử lý: " + e.getMessage());
+        return ResponseEntity.status(520).body("Runtime Error: " + e.getMessage());
     }
 
     @ExceptionHandler({RestClientException.class})
     public ResponseEntity<?> handler(RestClientException e) {
         logErrorDetail(e);
-        return ResponseEntity.status(521).body(new ResponseData<>().error(521, "Phản hồi lỗi: " + e.getMessage()));
+        return ResponseEntity.status(521).body(new ResponseData<>().error(521, "Error Response: " + e.getMessage()));
     }
     private void logErrorDetail(Exception e){
         // log Error Detail

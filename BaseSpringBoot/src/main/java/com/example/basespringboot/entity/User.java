@@ -30,5 +30,7 @@ public class User extends BaseEntity{
     @Column(name = "ROLE")
     private String role;
 
+    @Column(name = "REGION")
+    private String region;
 
 }

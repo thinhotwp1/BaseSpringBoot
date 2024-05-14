@@ -1,4 +1,4 @@
-package com.example.basespringboot.config;
+package com.example.basespringboot.config.jwt;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

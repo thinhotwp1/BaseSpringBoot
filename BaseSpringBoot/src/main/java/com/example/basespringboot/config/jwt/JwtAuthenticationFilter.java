@@ -1,4 +1,4 @@
-package com.example.basespringboot.config;
+package com.example.basespringboot.config.jwt;
 
 import com.example.basespringboot.service.UserService;
 import jakarta.servlet.FilterChain;
@@ -50,7 +50,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
             }
         } catch (Exception ex) {
-            response.sendError(401, "Không có quyền !");
+            response.sendError(401, "Error Authentication !");
         }
 
         filterChain.doFilter(request, response);
