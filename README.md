@@ -1,6 +1,6 @@
 # BaseSpringBoot
 
-This application has: 
+This base Spring Boot use for bank domain: 
 
 1. Springboot
 2. Spring Sercurity(Basic Authentication, JWT)
